@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.98.0">
-    <title>Shop A Lot</title>
+    <title>AnyCompany</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/pricing/">
     <!-- JavaScript Bundle with Popper -->
@@ -15,17 +15,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     
-
+<script src="https://unpkg.com/amazon-quicksight-embedding-sdk@1.19.0/dist/quicksight-embedding-js-sdk.min.js"></script>
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./quicksight-embedding-js-sdk.min.js"></script>
 
     <style>
-
-.container {
-  max-width: 960px;
-}
-
-
-
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -81,12 +75,14 @@
     
     <!-- Custom styles for this template -->
     <link href="pricing.css" rel="stylesheet">
+    
+
   </head>
   <body>
     
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="check" viewBox="0 0 16 16">
-    <title>Test</title>
+    <title>AnyCompany</title>
     <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
   </symbol>
 </svg>
@@ -94,12 +90,24 @@
 <div class="container py-3">
   <header>
     <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-        <span class="fs-4"><h1>Shop A Lot</h1></span>
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="fs-4">AnyCompany</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-dark text-decoration-none" href="#">About Us</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="#">My Orders</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="#">My Account</a>
+        <a class="py-2 text-dark text-decoration-none" href="#">Cart</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+        </svg>
+      </nav>
     </div>
 
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal">East Coast Store</h1>
-      <p class="fs-5 text-muted">Welcome to our East Coast Store</p>
+      <h1 class="display-4 fw-normal">West Coast Store</h1>
+      <p class="fs-5 text-muted">Welcome to our West Coast Store</p>
       <h2>Our Products</h2>
 
     </div>
@@ -140,13 +148,50 @@
       </div>
     </div>
 
-  
-
-    
   </main>
-
-
 </div>
+
+<button type="button" id="viewDasboard" class="btn btn-primary btn-lg">Large button</button>
+
+<script type="text/javascript">
+  var dashboard;
+
+  document.getElementById("viewDasboard").onclick = function (){
+    embedDashboard()
+  }
+
+
+  function embedDashboard() {
+      var containerDiv = document.getElementById("embeddingContainer");
+      var options = {
+          // replace this dummy url with the one generated via embedding API
+          url: "https://us-east-1.quicksight.aws.amazon.com/sn/dashboards/dashboardId?isauthcode=true&identityprovider=quicksight&code=authcode",  
+          container: containerDiv,
+          scrolling: "no",
+          height: "700px",
+          width: "1000px",
+          footerPaddingEnabled: true
+      };
+      dashboard = QuickSightEmbedding.embedDashboard(options);
+  }
+
+
+
+   
+
+
+
+
+
+</script>
+
+<iframe
+width="960"
+height="720"
+src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/b39ebefa-29e5-4027-9c61-3676706783e2?directory_alias=eltpaka-quicksight">
+</iframe>
+
+<div id="embeddingContainer"></div>
 
 
     
