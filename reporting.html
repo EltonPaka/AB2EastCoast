@@ -114,10 +114,39 @@
     </div>
   </header>
 
+  <script>
+
+      const dashboard = embedDashboard(options);
+
+      var options = {
+        url: "https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/b39ebefa-29e5-4027-9c61-3676706783e2?directory_alias=eltpaka-quicksight",
+        container: document.getElementById("embeddingContainer"),
+        parameters: {
+            country: "United States",
+            states: [
+                "California",
+                "Washington"
+            ]
+        },
+        scrolling: "no",
+        height: "AutoFit",
+        iframeResizeOnSheetChange: false, // use this option in combination with height: AutoFit, to allow iframe height to resize dynamically, based on sheet height, on changing sheets.
+        width: "1000px",
+        locale: "en-US",
+        footerPaddingEnabled: true,
+        sheetId: 'YOUR_SHEETID', // use this option to specify initial sheet id to load for the embedded dashboard
+        printEnabled: false, // use this option to enable or disable print option for dashboard embedding
+        undoRedoDisabled: false, // set this option to true to disable undo and redo buttons for dashboard embedding
+        resetDisabled: false, // set this option to true to disable reset button for dashboard embedding
+        defaultEmbeddingVisualType: TABLE // this option only applies to experience embedding and will not be used for dashboard embedding
+    };
+
+  </script>
+
   <main>
     <h1>Site Metrics & Reporting</h1>
 
-        <iframe style="height: 700px; width: 1000px;" allowfullscreen src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/b39ebefa-29e5-4027-9c61-3676706783e2?directory_alias=eltpaka-quicksight"></iframe>
+        <iframe id="embeddingContainer" style="height: 700px; width: 1000px;" allowfullscreen src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/b39ebefa-29e5-4027-9c61-3676706783e2?directory_alias=eltpaka-quicksight"></iframe>
     
 
 </br>
