@@ -70,6 +70,15 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+      .padding-table-columns td{
+        padding:0 10px 0 0; /* Only right padding*/
+      }
+
+      table, th, td{
+        padding-left: 50px;
+        padding-bottom: 50px;
+      }
+
     </style>
 
     
@@ -93,7 +102,6 @@
       <a href="./index.html" class="d-flex align-items-center text-dark text-decoration-none">
         <span class="fs-4">AnyCompany</span>
       </a>
-
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
         <a class="me-3 py-2 text-dark text-decoration-none" href="./about.html">About Us</a>
         <a class="me-3 py-2 text-dark text-decoration-none" href="./orders.html">My Orders</a>
@@ -103,75 +111,45 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
             <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
         </svg>
-
-        
       </nav>
     </div>
 
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
       <h1 class="display-4 fw-normal">East Coast Store</h1>
-
     </div>
   </header>
 
   <main>
     <h1>Site Metrics & Reporting</h1>
+    <h2>AnyCompany Trends</h2>
 
-    <div class="row mb-5">
-        <div class="col-lg-4 col-md-12">
-            <div class="card" style="width: 36rem;">
-                <div class="card-body">
-                    <iframe width="540" height="420" allowfullscreen src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/b39ebefa-29e5-4027-9c61-3676706783e2?directory_alias=eltpaka-quicksight">
-                    </iframe>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-            <div class="card" style="width: 36rem;">
-                <div class="card-body">
-                    <iframe width="540" height="420" allowfullscreen src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/37ae338f-69c6-454e-bca2-e559688d1540?directory_alias=eltpaka-quicksight">
-                    </iframe>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <div class="card" style="width: 36rem;">
-              <div class="card-body">
-                  <iframe width="540" height="420" allowfullscreen src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/e8e99dd9-eefd-4c40-8dcc-0865f3abcaec?directory_alias=eltpaka-quicksight">
-                  </iframe>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="card" style="width: 36rem;">
-            <div class="card-body">
-                <iframe width="540" height="420" allowfullscreen src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/4bb3b8b7-be0a-4304-83fa-587e95d32ab6?directory_alias=eltpaka-quicksight">
-                </iframe>
-            </div>
-          </div>
-        </div>
-    </div>
-
-    </div>
+    <table style="width: 50%;">
+      <tr>
+        <th>
+          <iframe width="540" height="420" allowfullscreen src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/b39ebefa-29e5-4027-9c61-3676706783e2?directory_alias=eltpaka-quicksight">
+          </iframe>
+        </th>
+        <th>
+          <iframe width="540" height="420" allowfullscreen src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/a46d47fb-6099-464e-bf6c-26c524f74a45?directory_alias=eltpaka-quicksight">
+          </iframe>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <iframe width="540" height="420" allowfullscreen src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/a46d47fb-6099-464e-bf6c-26c524f74a45?directory_alias=eltpaka-quicksight">
+          </iframe>
+        </th>
+        <th>
+          <iframe width="540" height="420" allowfullscreen src="https://us-east-1.quicksight.aws.amazon.com/sn/embed/share/accounts/261315237727/dashboards/b39ebefa-29e5-4027-9c61-3676706783e2?directory_alias=eltpaka-quicksight">
+          </iframe>
+        </th>
+      </tr>
+    </table>
 </div>
- 
 
 
-    
   </main>
+
 </div>
-
-
-
-          
-
-
-
   </body>
 </html>
